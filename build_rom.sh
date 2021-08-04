@@ -3,7 +3,6 @@ repo init --depth=1 --no-repo-verify -u git://github.com/CherishOS/android_manif
 git clone https://github.com/nhAsif/local_manifest.git --depth 1 -b cherish .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-
 # build rom
 source build/envsetup.sh
 export TZ=Asia/Dhaka #put before last build command
