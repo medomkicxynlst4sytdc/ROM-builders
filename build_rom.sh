@@ -1,6 +1,6 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/syberia-project/manifest.git -b 12.0 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/sajidshahriar72543/local_manifest.git --depth 1 -b syb .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u git://github.com/ShapeShiftOS/android_manifest.git -b android_12 -g default,-mips,-darwin,-notdefault
+git clone https://github.com/sajidshahriar72543/local_manifest.git --depth 1 -b ssos .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 #25
@@ -8,7 +8,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 export SELINUX_NEVERALLOWS=true
-lunch syberia_beryllium-userdebug
+lunch ssos_beryllium-userdebug
 export TZ=Asia/Dhaka #put before last build command
 export BUILD_HOSTNAME=6e6f6f62
 make bacon
