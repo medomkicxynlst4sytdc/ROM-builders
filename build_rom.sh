@@ -8,7 +8,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 export SELINUX_IGNORE_NEVERALLOWS=true
-lunch syberia_beryllium-user
+lunch syberia_beryllium-userdebug
 export TZ=Asia/Dhaka #put before last build command
 export BUILD_HOSTNAME=6e6f6f62
 make bacon
