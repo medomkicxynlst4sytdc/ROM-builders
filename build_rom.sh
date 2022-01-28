@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch aosp_rosy-userdebug
 export TZ=Asia/Jakarta
 export BUILD_USERNAME=rosy
-export BUILD_HOSTNAME=user
+export BUILD_HOSTNAME=builder
 make bacon
 
 # upload rom
