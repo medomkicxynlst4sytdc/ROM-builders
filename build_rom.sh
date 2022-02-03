@@ -7,8 +7,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch aosp_rosy-userdebug
 export TZ=Asia/Jakarta
-export BUILD_USERNAME=rosy
-export BUILD_HOSTNAME=builder
+export BUILD_USERNAME=nfs86
+export BUILD_HOSTNAME=nub-builder
 make bacon
 
 # upload rom
