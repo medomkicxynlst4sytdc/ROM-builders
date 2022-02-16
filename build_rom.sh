@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch radiant_alioth-user
+lunch radiant_alioth-userdebug
 export TZ=Asia/Manila #put before last build command
 mka bacon 
 
