@@ -4,7 +4,7 @@ git clone https://github.com/MukulSharma06175/Local-Manifests --depth 1 -b blast
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
-source build/envsetup.sh
+. build/envsetup.sh
 lunch aosp_lavender-eng
 export TZ=Asia/kolkata #put before last build command
 make bacon
