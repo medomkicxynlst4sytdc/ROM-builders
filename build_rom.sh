@@ -2,12 +2,12 @@
 repo init --depth=1 --no-repo-verify -u https://github.com/PixelBlaster-OS/manifest -b 12 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/MukulSharma06175/Local-Manifests --depth 1 -b blaster .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-  
+    
 # build rom
 . build/envsetup.sh
 lunch aosp_lavender-userdebug
-export BUILD_GAPPS=Gapps
-export TZ=Asia/kolkata #put before last build command
+export TZ=Asia/kolkata
+export BUILD_GAPPS=Gapps #put before last build command
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
