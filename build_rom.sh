@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u https://github.com/Project-Awaken/androi
 git clone https://github.com/iaiaian1/local-manifests.git --depth 1 -b Awaken-12.0 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-#6v2
+#7
 
 # build rom
 source build/envsetup.sh
