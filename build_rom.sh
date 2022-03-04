@@ -1,11 +1,11 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u git://github.com/DotOS/manifest.git -b dot11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/DPSLEGEND/local_manifest.git --depth 1 -b Dot .repo/local_manifests
+git clone https://github.com/indraadp/local_manifest.git --depth 1 -b dot .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch dot_RMX3171-userdebug
+lunch dot_juice-userdebug
 export TZ=Asia/Dhaka #put before last build command
 make bacon
 
