@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch cherish_maple_dsds-userdebug
 export BUILD_HOSTNAME=ArifJeNong
 export BUILD_USERNAME=ArifJeNong
-#export WITH_GMS=true
+export WITH_GMS=false
 export TZ=Asia/Jakarta #put before last build command
 brunch maple_dsds
 
