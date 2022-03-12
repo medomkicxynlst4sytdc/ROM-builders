@@ -51,7 +51,7 @@ task:
       
       $show" -d "chat_id=${your_telegram_id}" -d "parse_mode=HTML"
       
-      - curl -s "https://api.telegram.org/bot${my_bot_api}/sendmessage" -d "disable_web_page_preview=true" -d "parse_mode=html" -d "text=<code>$device-$rom_name</code> Started
+    - curl -s "https://api.telegram.org/bot${my_bot_api}/sendmessage" -d "disable_web_page_preview=true" -d "text=<code>$device-$rom_name</code> Started
       
       https://cirrus-ci.com/build/$CIRRUS_BUILD_ID
       
@@ -287,6 +287,6 @@ task:
     - grep _maple_dsds $CIRRUS_WORKING_DIR/build_rom.sh > /dev/null && device=maple_dsds
     - my_bot_api="ENCRYPTED[c164303e3f3a622812b6b6931ab79cf039b6a0d0179c92beb127e38e6bd12b046fc549f415f840731b93c5f1e7b5ec0a]"
     - my_telegram_id="ENCRYPTED[2fcebcb260e6d2b9e48a90f1cd7b9e9f680621be99f25338cae490c02e6079581478ec8b5cf7ca25f60b093ac1180959]"
-    - curl -s "https://api.telegram.org/bot${my_bot_api}/sendmessage" -d "disable_web_page_preview=true" -d "parse_mode=html" -d "text=<code>$device-$rom_name</code> Succeed
+    - curl -s "https://api.telegram.org/bot${my_bot_api}/sendmessage" -d "disable_web_page_preview=true" -d "text=<code>$device-$rom_name</code> Succeed
       
       https://cirrus-ci.com/build/$CIRRUS_BUILD_ID" -d "chat_id=${my_telegram_id}" -d "parse_mode=HTML"
