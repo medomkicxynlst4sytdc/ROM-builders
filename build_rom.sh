@@ -9,6 +9,7 @@ lunch spark_rosy-userdebug
 export TZ=Asia/Jakarta
 export BUILD_USERNAME=rosy
 export BUILD_HOSTNAME=userngebug
+export BUILD_BROKEN_TREBLE_SYSPROP_NEVERALLOW=true
 mka bacon
 
 # upload rom 
