@@ -1,9 +1,9 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/AOSPA/manifest -b sapphire -g default,-mips,-darwin,-notdefault
-git clone https://github.com/AzureHelper/local_manifests.git --depth 1 -b aospa-test .repo/local_manifests
+git clone https://github.com/AzureHelper/local_manifests.git --depth 1 -b aospa-wip .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
-# build rom [9]
+# build rom [10]
 source build/envsetup.sh
 lunch aospa_raphael-userdebug
 export ALLOW_MISSING_DEPENDENCIES=true
