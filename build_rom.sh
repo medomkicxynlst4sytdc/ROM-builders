@@ -8,6 +8,8 @@ source build/envsetup.sh
 lunch cipher_raphael-userdebug
 export ALLOW_MISSING_DEPENDENCIES=true
 export SELINUX_IGNORE_NEVERALLOWS=true
+export BUILD_USERNAME=XCode219
+export BUILD_HOSTNAME=cirrus-ci
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
 
