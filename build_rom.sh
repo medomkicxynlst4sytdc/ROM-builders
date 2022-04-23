@@ -8,6 +8,7 @@ source build/envsetup.sh
 lunch spark_mi439-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export WITH_GAPPS=true
+export TARGET_FACE_UNLOCK_SUPPORTED=false
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 export TZ=Asia/Dhaka #put before last build command
 mka bacon
