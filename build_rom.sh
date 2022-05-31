@@ -7,6 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch lineage_X00TD-userdebug
 export BUILD_USERNAME=morbid
+export BUILD_BROKEN_DUP_RULES=true
 export TZ=Asia/Jayapura #put before last build command
 mka bacon
 
