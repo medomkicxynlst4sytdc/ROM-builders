@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/envsetup.sh
 lunch arrow_miatoll-userdebug
 export TZ=Asia/Kolkata #put before last build command
-export ARROW_GAPPS=true
+#export ARROW_GAPPS=true
 m bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
