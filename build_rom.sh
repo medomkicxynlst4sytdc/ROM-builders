@@ -5,8 +5,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-export ALLOW_MISSING_DEPENDENCIES=true
-export SELINUX_IGNORE_NEVERALLOWS=true
 lunch aosp_lavender-user
 export TZ=Asia/Kolkata #put before last build command
 mka bacon
