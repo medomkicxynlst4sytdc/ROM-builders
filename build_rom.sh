@@ -1,4 +1,4 @@
-# sync source 
+# sync rom 
 repo init --depth=1 --no-repo-verify -u https://github.com/PixelExperience/manifest -b twelve -g default,-mips,-darwin,-notdefault
 git clone https://github.com/Stable-Stuffs/manifest --depth 1 -b PixelExperience .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
 export SELINUX_IGNORE_NEVERALLOWS=true
-lunch aosp_lavender-userdebug
+lunch aosp_lavender-user
 export TZ=Asia/Kolkata #put before last build command
 mka bacon
 
