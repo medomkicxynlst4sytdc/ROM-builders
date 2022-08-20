@@ -6,12 +6,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch aosp_lavender-user
-export KBUILD_BUILD_USER=ImSurajx 
-export KBUILD_BUILD_HOST=ImSurajx 
-export BUILD_USERNAME=ImSurajx 
-export BUILD_HOSTNAME=ImSurajx
-export ALLOW_MISSING_DEPENDENCIES=true
-export SELINUX_IGNORE_NEVERALLOWS=true
 export TZ=Asia/Kolkata #put before last build command
 mka bacon
 
