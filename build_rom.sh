@@ -4,7 +4,7 @@ git clone https://github.com/anandhan07/local_manifest.git --depth 1 -b ricedroi
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom [2]
-. build/envsetup.sh
+source build/envsetup.sh
 lunch lineage_vince-user
 export WITH_GMS=true
 export TZ=Asia/Dhaka #put before last build command
