@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 . build/envsetup.sh
-lunch aosp_lavender-userdebug
+lunch aosp_lavender-user
 export KBUILD_BUILD_USER=ImSurajx 
 export KBUILD_BUILD_HOST=Cirrus 
 export BUILD_USERNAME=ImSurajx 
