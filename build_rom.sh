@@ -1,11 +1,10 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u repo init -u https://github.com/Evolution-X/manifest -b tiramisu -g default,-mips,-darwin,-notdefault
-git clone https://github.com/baconpeedit/Local_Manifest.git --depth 1 -b evolution .repo/local_manifests
+git clone https://github.com/baconpeedit/Local_Manifest.git --depth 1 -b evolution13 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 # build rom
 source build/envsetup.sh
 lunch evolution_ginkgo-userdebug
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 export TZ=Asia/Delhi #put before last build command
 mka evolution
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
