@@ -1,11 +1,11 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/RiceDroid/android -b thirteen -g default,-mips,-darwin,-notdefault
-git clone https://github.com/donboruza/local_manifests.git --depth 1 -b sweet-13 .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/Spark-Rom/manifest -b pyro -g default,-mips,-darwin,-notdefault
+git clone https://github.com/donboruza/local_manifests.git --depth 1 -b sweet-pyro .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch lineage_sweet-userdebug
+lunch spark_sweet-userdebug
 export BUILD_USERNAME=don.boruza
 export BUILD_HOSTNAME=prototype
 export TZ=Asia/Jakarta
