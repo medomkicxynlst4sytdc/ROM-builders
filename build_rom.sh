@@ -8,7 +8,7 @@ source build/envsetup.sh
 lunch lineage_beryllium-user
 export BUILD_USERNAME=Shikhar
 export KBUILD_BUILD_NAME=Shikhar
-export TZ=Asia/Dhaka #put before last build command
+export TZ=Asia/Delhi #put before last build command
 make bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
