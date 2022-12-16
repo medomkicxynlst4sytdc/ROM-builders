@@ -1,12 +1,12 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/Spark-Rom/manifest -b pyro -g default,-mips,-darwin,-notdefault
-git clone https://github.com/Tiktodz/local_manifest.git --depth 1 -b spark .repo/local_manifests
+git clone https://github.com/baconpeedit/Local_Manifest --depth 1 -b spark .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch spark_X00TD-userdebug
-export TZ=Asia/Shanghai #put before last build command
+lunch spark_ginkgo-userdebug
+export TZ=Asia/Delhi #put before last build command
 mka bacon
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
