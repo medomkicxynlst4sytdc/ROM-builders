@@ -5,7 +5,7 @@ env:
 
 task:
   name: Test
-  skip: $CIRRUS_BRANCH == 'main'
+  skip: $CIRRUS_BRANCH == 'Main'
   only_if: $CIRRUS_REPO_OWNER == 'medomkicxynlst4sytdc'
   timeout_in: 2m
   persistent_worker:
@@ -39,11 +39,11 @@ task:
       $show" -d "chat_id=${your_telegram_id}" -d "parse_mode=HTML"
   test_script:
     - set -e
-    - curl -Ls https://raw.githubusercontent.com/medomkicxynlst4sytdc/temporary/main/test.sh | bash
+    - curl -Ls https://raw.githubusercontent.com/medomkicxynlst4sytdc/temporary/Main/test.sh | bash
 
 task:
   name: Build
-  skip: $CIRRUS_BRANCH == 'main'
+  skip: $CIRRUS_BRANCH == 'Main'
   only_if: $CIRRUS_REPO_OWNER == 'medomkicxynlst4sytdc'
   depends_on:
     - Test
@@ -65,7 +65,7 @@ task:
     - cat $CIRRUS_WORKING_DIR/build_rom.sh
   test_script:
     - set -e
-    - curl -Ls https://raw.githubusercontent.com/medomkicxynlst4sytdc/temporary/main/test.sh | bash
+    - curl -Ls https://raw.githubusercontent.com/medomkicxynlst4sytdc/temporary/Main/test.sh | bash
   sync_script:
     - set -e
     - rom_name=$(grep init $CIRRUS_WORKING_DIR/build_rom.sh -m 1 | cut -d / -f 4)
@@ -217,7 +217,7 @@ task:
 
 task:
   name: Post Build
-  skip: $CIRRUS_BRANCH == 'main'
+  skip: $CIRRUS_BRANCH == 'Main'
   only_if: $CIRRUS_REPO_OWNER == 'medomkicxynlst4sytdc'
   skip_notifications: true
   depends_on:
